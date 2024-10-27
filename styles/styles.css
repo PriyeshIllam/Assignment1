@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100vh;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+ }
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background-color: #080808;
+}
+
+.header h1 {
+  font-size: 50px;
+  color: #ffffff;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #a00303;
+  color: black;
+}
+
+.row {
+height: 70%;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 25%;
+  padding: 20px;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 75%;
+  padding-left: 20px;
+  background-image: url("../images/crop-tattooed-artist-arm-holding-paintbrush-painting.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+.fakeimg__left {
+  background-color: #aaa;
+  width: 20%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card__left {
+  background-color: #ffffff;
+  padding: 10px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.card__left p {  
+  margin: 25px 25px 25px 25px;
+  text-align: left;
+}
+
+.card {
+  padding: 55px;
+  margin: 25px 25px 25px 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Clear floats after the columns */
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #9ba2a8;
+  margin-top: 10px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn,
+  .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.column__footer {
+  width: 100%;
+  box-sizing: border-box;
+  }
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+
+  .column__footer {
+    width: 100%;
+    box-sizing: border-box;
+    }
+     
+  .copyright {
+    text-align: center;
+  }
+}
+
+

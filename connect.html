@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/connect.css">
+     <!-- Font Awesome CDN -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>Assignment 1</title>
+</head>
+<body>
+    <div class="header">
+        <h1>INQUIRIES</h1>
+    </div>    
+      <div class="topnav">
+        <a href="index.html">About me</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="connect.html" class="active">Connect me</a>
+      </div>
+      <div class="background">
+        <div class="container">
+          <div class="screen">
+            <div class="screen-header">
+              <div class="screen-header-left">
+                <div class="screen-header-button close"></div>
+                <div class="screen-header-button maximize"></div>
+                <div class="screen-header-button minimize"></div>
+              </div>
+              <div class="screen-header-right">
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+              </div>
+            </div>
+            <div class="screen-body">
+              <div class="screen-body-item left">
+                <div class="app-title">
+                  <span>CONNECT</span>
+                  <span>ME</span>
+                </div>
+                <div class="app-contact">CONTACT INFO : +46 00 000 000 000</div>
+              </div>
+              <form onsubmit="sendMail(event)">
+              <!--form action="mailto: priyesh.illam@edu.futuregames.se" enctype="text/plain" method= "post" -->
+              <div class="screen-body-item">
+                <div class="app-form">
+                  <div class="app-form-group">
+                    <input class="app-form-control" placeholder="NAME" value="" id="name" required>
+                  </div>
+                  <div class="app-form-group">
+                    <input class="app-form-control" placeholder="EMAIL" id="email" required>
+                  </div>
+                  <div class="app-form-group">
+                    <input class="app-form-control" placeholder="CONTACT NO" id="no" required>
+                  </div>
+                  <div class="app-form-group message">
+                    <input class="app-form-control" placeholder="MESSAGE" id="message" required>
+                  </div>
+                  <div class="app-form-group buttons">
+                    <button class="app-form-button">CANCEL</button>
+                    <button class="app-form-button">SEND</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            </div>
+          </div>          
+        </div>
+      </div> 
+     <footer class="footer">        
+        <div class="column__footer">
+           <div class="social-icons">
+              <a href="https://www.facebook.com/FuturegamesEDU/"><i class="fab fa-facebook-square"></i></a>
+              <a href="https://www.linkedin.com/school/futuregames/"><i class="fab fa-linkedin"></i></a>
+              <a href="https://www.instagram.com/futuregamesedu/"><i class="fa-brands fa-square-instagram"></i></a>
+            </div>
+        </div>       
+      <div class="copyright">
+          <p>copyright 2024 @ priyesh</p>
+       </div>
+    </footer>
+    <script>
+      function sendMail(event) {
+        event.preventDefault(); // Prevent form submission    
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+        console.log('message', message)
+        // Construct the mailto link
+        const mailtoLink = `mailto:priyesh.illam@edu.futuregames.se?subject=Contact Form Submission&body=From: ${email}%0D%0A%0D%0A${message}`;
+        console.log('mailtoLink', mailtoLink)
+        // Open the user's email client with the mailto link
+        window.location.href = mailtoLink;
+      }
+    </script>
+</body>
+</html>
